@@ -200,7 +200,15 @@ export default {
     }
   },
   mounted () {
-    this.init(this.data)
+    if (this.data && this.data.length > 0) {
+      this.init(this.data)
+    } else {
+      import('../assets/json/city.json').then(data => {
+        this.data = data
+        this.init(this.data)
+      })
+    }
+    
   }
 }
 </script>

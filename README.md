@@ -1,5 +1,10 @@
 # Dwb-City
 
+[![](https://img.shields.io/badge/vue-2.x-green.svg)]()
+[![](https://img.shields.io/npm/v/dwb-city.svg?style=flat)](https://www.npmjs.com/package/dwb-city)
+[![](https://img.shields.io/npm/dt/dwb-city.svg)]()
+[![](https://img.shields.io/github/stars/dengwb1991/dwb-city.svg?style=social&label=Stars)]()
+
 ## Install
 
 ``` bash
@@ -40,7 +45,7 @@ export default {
 ``` javascript
 data () {
   return {
-    cityData: [CITY JSON],
+    cityData: [CITY JSON], // 省市区json 不传默认引入
     show: [True/False],
     city: [110000, 110100, 110112]
   }
@@ -53,4 +58,4 @@ this.$refs.city.setCurr(this.city)
 [[Dwb City]](http://vuetool.dengwb.com/#/city)
 
 ## Author
-[[Dengwb]](http://www.dengwb.com/app/welcome.html)# dwb-city
+[[Dengwb]](http://www.dengwb.com/app/welcome.html)
