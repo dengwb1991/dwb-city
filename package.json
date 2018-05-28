@@ -1,6 +1,6 @@
 {
   "name": "dwb-city",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "city",
   "main": "index.js",
   "scripts": {
