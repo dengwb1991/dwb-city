@@ -1,6 +1,6 @@
 {
   "name": "dwb-city",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "city",
   "main": "./dist/app.bundle.min.js",
   "scripts": {
