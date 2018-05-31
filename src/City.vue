@@ -32,6 +32,8 @@
 </template>
 
 <script>
+import cityJson from '../assets/json/city.json'
+
 export default {
   name: 'dwb-city',
   props: {
@@ -60,7 +62,8 @@ export default {
       endTime: [0, 0, 0],       // 记录结束时间戳
       speed: [0, 0, 0],         // 记录速度
       interval: [],
-      currArr: []
+      currArr: [],
+      cityJson
     }
   },
   computed: {
@@ -209,10 +212,8 @@ export default {
     if (this.data && this.data.length > 0) {
       this.init(this.data)
     } else {
-      import('../assets/json/city.json').then(data => {
-        this.cityData = data
-        this.init(this.cityData)
-      })
+      this.cityData = cityJson
+      this.init(this.cityData)
     }
     
   }
