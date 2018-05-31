@@ -2,7 +2,6 @@
  * dwb-city
  * @author dengwb
  */
-
 let City = require('./src/City.vue')
 City = City.default || City
 

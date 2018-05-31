@@ -55,6 +55,12 @@ this.$refs.city.setCurr(this.city)
 ```
 
 ## Example
+```bash
+npm install
+
+npm run dev
+```
+
 [[Dwb City]](http://vuetool.dengwb.com/#/city)
 
 ## Author

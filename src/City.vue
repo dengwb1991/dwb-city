@@ -36,11 +36,17 @@ export default {
   name: 'dwb-city',
   props: {
     value: Boolean,
-    data: Array,
+    data: {
+      type: Array,
+      default: () => {
+        return []
+      }
+    },
     city: Array
   },
   data () {
     return {
+      cityData: this.data,
       isLoad: false,            // 是否展示
       vals: this.city,          // 参数
       index: 0,
@@ -123,7 +129,7 @@ export default {
         if (stopGear) {
           let gearVal = Math.abs(pos) / 2
           this.valIndex[index] = Math.round(gearVal)
-          this.init(this.data, index, true)
+          this.init(this.cityData, index, true)
           clearInterval(this.interval[index])
         }
         this.currArr[index].y = this.transY[index] = this.endTop[index] = pos
@@ -139,7 +145,7 @@ export default {
     setCurr (data) {
       this.isLoad = false
       this.vals = data
-      this.init(this.data, undefined, true)
+      this.init(this.cityData, undefined, true)
     },
     /**
      * 确定
@@ -204,8 +210,8 @@ export default {
       this.init(this.data)
     } else {
       import('../assets/json/city.json').then(data => {
-        this.data = data
-        this.init(this.data)
+        this.cityData = data
+        this.init(this.cityData)
       })
     }
     
