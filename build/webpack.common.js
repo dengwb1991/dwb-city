@@ -59,7 +59,9 @@ module.exports = {
     })
   ],
   output: {
-    filename: '[name].bundle.js',
-    path: path.resolve(__dirname, '../dist')
+    filename: '[name].bundle.min.js',
+    path: path.resolve(__dirname, '../dist'),
+    library: 'DwbCity',
+    libraryTarget: 'umd'
   }
 }

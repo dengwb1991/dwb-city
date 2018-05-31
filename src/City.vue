@@ -33,7 +33,7 @@
 
 <script>
 export default {
-  name: 'dwbCity',
+  name: 'dwb-city',
   props: {
     value: Boolean,
     data: {

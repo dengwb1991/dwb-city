@@ -2,7 +2,7 @@
   "name": "dwb-city",
   "version": "0.0.8",
   "description": "city",
-  "main": "./dist/app.bundle.js",
+  "main": "./dist/app.bundle.min.js",
   "scripts": {
     "dev": "webpack-dev-server --open --inline --progress --config ./build/webpack.dev.js",
     "build": "webpack --config ./build/webpack.prod.js",
