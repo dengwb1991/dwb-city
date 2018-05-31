@@ -2,7 +2,6 @@ const path = require('path');
 const webpack = require('webpack');
 const config = require('../config')
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const vueLoaderConfig = require('./vue-loader.conf');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
@@ -43,11 +42,6 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new webpack.HotModuleReplacementPlugin(),
-    new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: 'index.html',
-      inject: true
-    }),
     new UglifyJsPlugin({
       uglifyOptions: {
         compress: {
@@ -60,6 +54,7 @@ module.exports = {
   ],
   output: {
     filename: '[name].bundle.min.js',
+    publicPath: '/',
     path: path.resolve(__dirname, '../dist'),
     library: 'DwbCity',
     libraryTarget: 'umd'
