@@ -11,3 +11,5 @@ export default {
     Vue.component(City.name, City)
   }
 }
+
+export const dwbCity = City
