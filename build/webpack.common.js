@@ -41,7 +41,6 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(['dist']),
-    new webpack.HotModuleReplacementPlugin(),
     new UglifyJsPlugin({
       uglifyOptions: {
         compress: {

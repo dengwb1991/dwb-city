@@ -2,6 +2,7 @@ const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const config = require('../config');
+const webpack = require('webpack');
 
 const configuration = merge(common, {
   // mode: 'development',
@@ -16,6 +17,7 @@ const configuration = merge(common, {
   }
 })
 configuration.plugins = configuration.plugins.concat([
+  new webpack.HotModuleReplacementPlugin(),
   new HtmlWebpackPlugin({
     filename: 'index.html',
     template: 'index.html',

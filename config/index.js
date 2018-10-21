@@ -7,7 +7,7 @@ module.exports = {
     cacheBusting: true,
     cssSourceMap: true,
     assetsSubDirectory: 'static',
-    host: 'localhost',
+    host: '0.0.0.0',
     port: 8088
   },
   build: {
