@@ -34,7 +34,7 @@ module.exports = {
         options: {
           presets: ['es2015']
         },
-        include: [resolve('src'), resolve('test'), resolve('node_modules/webpack-dev-server/client')],
+        include: [resolve('src'), resolve('index.js'), resolve('node_modules/webpack-dev-server/client')],
         exclude: /node_modules/
       }
     ]
